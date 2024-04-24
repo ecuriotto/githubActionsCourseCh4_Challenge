@@ -43,7 +43,7 @@ jobs:
           echo "- Auto-deploy the artifact to the staging environment"
         
   test-staging:
-    needs [staging]
+    needs: [staging]
     runs-on: ubuntu-latest
     steps:
       - run: echo "- Test the staging environment"
